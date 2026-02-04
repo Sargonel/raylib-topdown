@@ -109,7 +109,7 @@ void check_damage(enemy_st *e,player_st *p,bullet_st bullet[MAX_BULLET]){
 }
 
     if(CheckCollisionRecs(e1,p1)){p->health -= 10 * dt;}
-    if(p->health == 0){p->active = false;}
+    if(p->health <= 0){p->active = false;}
     
 }
 void draw_health(player_st p){
